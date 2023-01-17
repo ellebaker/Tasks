@@ -1,4 +1,4 @@
-#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
+#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 
 library(swirl)
 swirl()
 library(swirl)
@@ -191,4 +191,73 @@ my_matrix <- my_vector
 ?matrix
 my_matrix2 <- matrix(data = 1:20, nrow =4, ncol =5)
 identical(my_matrix, my_matrix2)
-patients <- c("Bill","Gina", "Kelly", )
+patients <- c("Bill","Gina", "Kelly", "Sean")
+cbind(patients, my_matrix)
+my_data <- data.frame(patients, my_matrix)
+my_data
+class(my_data)
+colnames(my_data) <- cnames
+my_data
+2
+1
+8
+TRUE == TRUE
+(FALSE == TRUE) == FALSE
+6==7
+6<7
+10<=10
+5!=7
+!(5==7)
+FALSE&FALSE
+TRUE && c(TRUE, FALSE,FALSE)
+TRUE || c(TRUE,FALSE,FALSE)
+5>8 || 6!=8 && 4>3.9
+isTRUE(6>4)
+3
+5
+identical('twins','twins')
+2
+4
+xor(5==6, !FALSE)
+2
+1
+ints <- sample(10)
+ints
+ints>5
+which(ints>7)
+3
+any(ints<0)
+all(ints>0)
+3
+2
+1
+1
+1
+9
+Sys.Date()
+mean(c(2,4,5))
+boring_function <- function(x)
+submit()  
+boring_function('My first function!')
+boring_function
+submit()
+my_vector<-c(2,4,5)
+submit()
+?cars
+head(cars)
+plot(cars)
+?plot
+plot(y = cars$speed, x = cars$dist)
+plot(cars)
+plot(x = cars$speed, y = cars$dist, xlab = "Speed")
+plot(x = cars$speed, y = cars$dist, ylab = "Stopping Distance")
+plot(x = Speed, y = Stopping Distance)
+plot(x = cars$speed, y = cars$dist, ylab ="Stopping Distance",xlab = "Speed")
+plot(cars, main = "My Plot")
+plot(cars, sub = "My Plot Subtitle")
+plot(cars, col = 2)
+plot(cars, xlim = c(10,15))
+plot(cars, pch = 2)  
+data(mtcars)
+boxplot(formula = mpg ~ cyl, data = mtcars )
+hist(mtcars$mpg)
