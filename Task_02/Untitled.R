@@ -236,7 +236,7 @@ head(cyrusMass)
 Mass<-which(data2[,'event'] == 'trait_mass')
 Mass <-which(data2$event == 'trait_mass')
 dayID<- apply(data2, 1, function(x) paste(x[1:3], collapse='-'))
-dateID<- sapply(dayID, as.Date, format= "%Y-%m-%d", origin = "2019-04-12")
+dateID<- sapply(dayID, as.Date, format= "%Y-%m-%d", origin = "2022-04-12")
 data2$age<- dateID - dateID[which(data2$event == 'birth')]
 head(data2)
 cyrus2<- data2
@@ -307,7 +307,7 @@ y2<-cyrus3$age[Mass]
 plot(x,y, cex=1, pch=16, xlab="Age in Days", ylab="Mass in KG", col="pink")
 points(x2, y2, cex=1, pch=16, col="green")
 
-
+cyrus3$value[Mass]
 
 boxplot( beren3$value[Mass] ~ beren3$age[Mass], xlab="age in days", ylab="mass in kg")
 par(las=1, mar=c(5,5,1,1), mgp=c(2,0.5,0), tck=-0.01)
