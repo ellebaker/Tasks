@@ -10,25 +10,22 @@ head(GustafsonEtAlGenotypes)
 head(InternalRelatedness)
 head(A_Pumas)
 
+
 #B Pumas
 BrazilPuma<- read.csv(' ~/Desktop/Evolution/Tasks/Project/B Pumas.csv', sep="/", header=T)
 BrazilPuma<- read.csv(' ~/Desktop/Evolution/Tasks/Project/Pumas in B/B Pumas.csv')
 library(readr)
-B_Pumas <- read_csv("Pumas in B/B Pumas.csv")
+B_Pumas <- read.csv("Pumas in B/B Pumas.csv")
 head(B_Pumas)
 
 #C Pumas
 library(adegenet)
 C_pumas<-read.structure('~/Desktop/Evolution/Tasks/Project/Pumas in C/Structure_BZ Felids_Wultsch_et_al.str', n.loc=14, n.ind=108, onerowperind = FALSE, NA.char = "-9")
 C_pumas<-read.table('~/Desktop/Evolution/Tasks/Project/Pumas in C/Structure_BZ Felids_Wultsch_et_al.str', sep="\t")
-
+head(C_pumas)
 library(phytools)
 Cpumas <- read.tree('~/Desktop/Evolution/Tasks/Project/Pumas in C/Cytb_BZ_Felids.nex')
 
 #D Pumas
 D_Pumas<- read.table('~/Desktop/Evolution/Tasks/Project/Pumas in D/Ernest-etal-Genotypes_PLosOne2014.txt', sep='/', header=TRUE)
 head(D_Pumas)
-
-#E Pumas
-E_Pumas<- read.table('~/Desktop/Evolution/Tasks/Project/Pumas in E/Raw_RADseq_Data4.tar')
-head(E_Pumas)
