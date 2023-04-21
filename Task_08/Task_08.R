@@ -74,9 +74,3 @@ dev.off()
 #Extra credit
 phylomorphospace(Tree,traitMat, xlab="Trait 1", ylab="Trait 2")
 pdf("08_ec.pdf")
-
-
-
-
-
-

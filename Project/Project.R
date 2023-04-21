@@ -59,7 +59,7 @@ plot(x, AR, xlab="numbers", ylab="Allelic Richness", main="Allelic Richness Amon
 plot(1, type="n", xlim=c(1,4), ylim=c(0,1), xlab="Allelic Richness", ylab="F Statistic")
 
 for (Puma){
-  (lines(FstatP, type="o", col="pink", lwd=2, pch=20)
+  (lines(FstatP, type="o", col="pink", lwd=2, pch=20))
 }
 
 for (Ocelot){
@@ -75,12 +75,19 @@ x<-c(2.82, 8.89, 4.20, 2.00, 3.475, 4.6, 5.265, 4.50, 4.34, 3.36, 7.83, 3.92, 1.
 plot(x,y, xlab="Allelic Richness", ylab="F Statistic", xlim="1,10", ylim="-1,1", pch=20)
 
 #PLOT HERE
-plot(x1,y1, xlab="Allelic Richness", ylab="F Statistic", main="Allelic Richness Vs F Statistic for 4 Species of Big Cats", xlim=c(0,10), ylim=c(-1,1), col="pink", pch=20)
-points(x2,y2, col="blue", pch=20)
-points(x3,y3, col="purple", pch=20)
-points(ARL,FstatL, col="red", pch=20)
+par(bg= "aliceblue")
+plot(x1,y1, xlab="Allelic Richness", ylab="F Statistic", main="Allelic Richness Vs F Statistic for 4 Species of Big Cats", xlim=c(0,10), ylim=c(-0.4,0.4), col="pink", pch=20, cex=1.5, abline(lm(y ~ x), col="black"))
+     x1, avg, ylim=range(c(avg-sdev)))
+points(x2,y2, col="blue", pch=20, cex=1.5)
+points(x3,y3, col="purple", pch=20, cex=1.5)
+points(ARL,FstatL, col="red", pch=20, cex=1.5)
+grid(nx=NULL, ny=NULL, lty=2, col="gray", lwd=2)
 legend("topright", legend=c("Pumas","Ocelots", "Jaguars", "Lions"), col=c("pink", "blue","purple", "red"), pch=20)
 
+#Pearson's Correlation indicates 0.1369008
+correlation<-cor.test(x=Allelic_Richness, y=F_Statistic)
+correlation
+dev.off()
 
 col=c("pink","blue","purple", "red")
 x1<-c(2.82, 8.89, 4.20, 2.00)
@@ -94,3 +101,5 @@ y4<-c(-0.11111111, -0.20189274, 0.09278351, 0.04615385)
 x4<-FstatP
 plot(x,y, xlab="Allelic Richness", ylab="F Statistic")
 
+Allelic_Richness<- c(x1, x2, x3, x4)
+F_Statistic<- c(y1, y2, y3, y4)
