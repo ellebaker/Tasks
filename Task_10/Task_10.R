@@ -16,7 +16,6 @@ for (i in 1:100){
 }
 plot(z,slope,xlab="z", ylab= "Estimated Slope")
 abline(lm(slope~z), col="red")
-pdf("plot10.pdf")
 dev.off()
 
 #Monty Hall EC
@@ -29,7 +28,6 @@ switchwinchance<- sum(prize==doorclosed)/n
 ?barplot
 winchance<- c(noswitchwinchance, switchwinchance)
 barplot(winchance, names.arg=c("Not Switching Doors", "Switching Doors"), ylab="Chance of Winning", main="Monty Hall Odds of Winning Grand Prize", col="green")
-pdf("plot10_ec01.pd")
 dev.off()
 
 #Meme
@@ -42,7 +40,7 @@ library(jpeg)
 meme<-readJPEG("~/Desktop/Evolution/Tasks/Task_10/MitchellMeme.JPEG")
 meme2<-readJPEG(system.file("~/Desktop/Evolution/Tasks/Task_10/MitchellMeme.JPEG", package="jpeg"))
 meme(meme)
-pdf("Task10_ec2")
+
 
 
 
