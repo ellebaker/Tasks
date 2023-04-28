@@ -99,7 +99,6 @@ y3<-c(0.04347826, 0.02739726, 0.00000000, -0.06423358)
 x4<-c(3.92, 1.00, 2.22, 3.88)
 y4<-c(-0.11111111, -0.20189274, 0.09278351, 0.04615385)
 x4<-FstatP
-plot(x,y, xlab="Allelic Richness", ylab="F Statistic")
 
 Allelic_Richness<- c(x1, x2, x3, x4)
 F_Statistic<- c(y1, y2, y3, y4)
